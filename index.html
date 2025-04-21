@@ -1,171 +1,420 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tayf Autism Center</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="styles.css">
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Nunito:wght@700;800&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Nunito:wght@700;800&display=swap"
+        rel="stylesheet">
     <!-- Add preloading for background images to improve performance -->
     <link rel="preload" href="images/lg-bg-Key Programs & Services.png" as="image" media="(min-width: 768px)">
     <link rel="preload" href="images/sm-bg-Key Programs & Services.png" as="image" media="(max-width: 767.98px)">
+
+    <style>
+        .workchop {
+            width: 100%;
+            min-height: 100vh;
+            background-color: #555;
+        }
+    </style>
 </head>
+
 <body>
+
+
+    <header class="header">
+        <nav class="container-fluid navbar d-flex justify-content-between align-items-center">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/Component 7 – 1@2x.png" alt="Logo">
+                </a>
+            </div>
+            <ul class="nav-menue d-flex ">
+                <li><a href="index.html">Home</a></li>
+                <li class="has-sub-menu">
+                    <a href="#" onclick="handleDropDowenMenu(this)">Programs and services</a>
+                    <svg class="menu-arrow" xmlns="http://www.w3.org/2000/svg" width="20.358" height="11.082"
+                        viewBox="0 0 20.358 11.082">
+                        <path id="arrow-up-svgrepo-com"
+                            d="M19.906,10.624a1.543,1.543,0,0,0,0-2.182L12.359.9A3.086,3.086,0,0,0,8,.9L.452,8.448A1.543,1.543,0,0,0,2.634,10.63L9.091,4.173a1.543,1.543,0,0,1,2.182,0l6.452,6.452A1.543,1.543,0,0,0,19.906,10.624Z"
+                            transform="translate(20.358 11.082) rotate(180)" fill="#704384" />
+                    </svg>
+
+                    <ul class="sub-menu">
+                        <li><a href="about.html">Avilable Progams</a></li>
+                        <li><a href="about.html">Community Involovement</a></li>
+                        <li><a href="about.html">Ressourses</a></li>
+                        <li><a href="about.html">Program Inquiry</a></li>
+                    </ul>
+                </li>
+                <li class="has-sub-menu">
+                    <a href="#" onclick="handleDropDowenMenu(this)">About Us</a>
+                    <svg class="menu-arrow" xmlns="http://www.w3.org/2000/svg" width="20.358" height="11.082"
+                        viewBox="0 0 20.358 11.082">
+                        <path id="arrow-up-svgrepo-com"
+                            d="M19.906,10.624a1.543,1.543,0,0,0,0-2.182L12.359.9A3.086,3.086,0,0,0,8,.9L.452,8.448A1.543,1.543,0,0,0,2.634,10.63L9.091,4.173a1.543,1.543,0,0,1,2.182,0l6.452,6.452A1.543,1.543,0,0,0,19.906,10.624Z"
+                            transform="translate(20.358 11.082) rotate(180)" fill="#704384" />
+                    </svg>
+
+                    <ul class="sub-menu">
+                        <li><a href="about.html">Vision</a></li>
+                        <li><a href="about.html">Our Story</a></li>
+                        <li><a href="about.html">Out Team</a></li>
+                        <li><a href="about.html">FAQs</a></li>
+                    </ul>
+                </li>
+                <li class="has-sub-menu">
+                    <a href="#" onclick="handleDropDowenMenu(this)">
+                        Support
+                    </a>
+                    <svg class="menu-arrow" xmlns="http://www.w3.org/2000/svg" width="20.358" height="11.082"
+                        viewBox="0 0 20.358 11.082">
+                        <path id="arrow-up-svgrepo-com"
+                            d="M19.906,10.624a1.543,1.543,0,0,0,0-2.182L12.359.9A3.086,3.086,0,0,0,8,.9L.452,8.448A1.543,1.543,0,0,0,2.634,10.63L9.091,4.173a1.543,1.543,0,0,1,2.182,0l6.452,6.452A1.543,1.543,0,0,0,19.906,10.624Z"
+                            transform="translate(20.358 11.082) rotate(180)" fill="#704384" />
+                    </svg>
+
+                    <ul class="sub-menu">
+                        <li><a href="about.html">Why Tayf</a></li>
+                        <li><a href="about.html">Donat Now</a></li>
+                    </ul>
+                </li>
+                <li class="has-sub-menu">
+                    <a href="#" onclick="handleDropDowenMenu(this)">
+                        Let's Contact
+                    </a>
+                    <svg class="menu-arrow" xmlns="http://www.w3.org/2000/svg" width="20.358" height="11.082"
+                        viewBox="0 0 20.358 11.082">
+                        <path id="arrow-up-svgrepo-com"
+                            d="M19.906,10.624a1.543,1.543,0,0,0,0-2.182L12.359.9A3.086,3.086,0,0,0,8,.9L.452,8.448A1.543,1.543,0,0,0,2.634,10.63L9.091,4.173a1.543,1.543,0,0,1,2.182,0l6.452,6.452A1.543,1.543,0,0,0,19.906,10.624Z"
+                            transform="translate(20.358 11.082) rotate(180)" fill="#704384" />
+                    </svg>
+
+                    <ul class="sub-menu">
+                        <li><a href="about.html">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="28.005" height="28.005"
+                                    viewBox="0 0 28.005 28.005">
+                                    <path id="linkedin-round-svgrepo-com"
+                                        d="M-129,145a14,14,0,0,0-14,14,14,14,0,0,0,14,14,14,14,0,0,0,14-14A14,14,0,0,0-129,145Zm-3.916,19.861h-2.729v-8.735h2.729Zm-1.439-9.829h-.022a1.515,1.515,0,0,1-1.63-1.515A1.53,1.53,0,0,1-134.336,152a1.523,1.523,0,0,1,1.646,1.515A1.523,1.523,0,0,1-134.352,155.032ZM-122,164.861h-3.1v-4.518c0-1.181-.481-1.991-1.548-1.991a1.56,1.56,0,0,0-1.477,1.072,2.064,2.064,0,0,0-.066.717v4.72h-3.069s.038-8.008,0-8.735h3.069V157.5a2.793,2.793,0,0,1,2.724-1.455c1.942,0,3.462,1.258,3.462,3.96Z"
+                                        transform="translate(143 -145)" fill="#fff" />
+                                </svg>
+
+                            </a></li>
+                        <li><a href="about.html">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="27.885" height="27.893"
+                                    viewBox="0 0 27.885 27.893">
+                                    <g id="X_icon_-_Gray" transform="translate(0 0)">
+                                        <path id="path2"
+                                            d="M12.7.211A13.962,13.962,0,0,0,.813,18.026,13.944,13.944,0,1,0,17.452.537,13.665,13.665,0,0,0,12.7.211Zm.186,8.66c1.193,1.585,2.2,2.89,2.237,2.89s1.277-1.305,2.741-2.89l2.675-2.89h1.519l-.326.345c-.186.2-1.4,1.51-2.694,2.917s-2.564,2.778-2.816,3.03l-.447.475,3.5,4.652c1.92,2.564,3.5,4.689,3.5,4.727a20.478,20.478,0,0,1-2.536.074l-2.545-.009-2.368-3.169a19.7,19.7,0,0,0-2.47-3.076c-.056.047-1.38,1.473-2.946,3.169L7.058,22.2H6.34a2.78,2.78,0,0,1-.727-.047c0-.028,1.482-1.65,3.29-3.6s3.291-3.58,3.309-3.607-1.472-2.061-3.29-4.494S5.613,6.028,5.613,6.009s1.146-.028,2.554-.028h2.554Zm0,0"
+                                            transform="translate(-0.254 -0.134)" fill="#fff" />
+                                        <path id="path4"
+                                            d="M41.3,37.631c.037.065,2.386,3.216,5.2,6.982l5.127,6.861,1.146.01c.709,0,1.138-.037,1.119-.093s-2.349-3.2-5.182-6.991l-5.165-6.9H42.393c-.96,0-1.156.019-1.09.131Zm0,0"
+                                            transform="translate(-33.64 -30.533)" fill="#fff" />
+                                    </g>
+                                </svg>
+
+                            </a></li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="nav-btns">
+                <a class="donate-btn" href="#">
+                    <svg id="Component_7_1" data-name="Component 7 – 1" xmlns="http://www.w3.org/2000/svg"
+                        width="73.529" height="95.482" viewBox="0 0 73.529 95.482">
+                        <g id="Group_111" data-name="Group 111" transform="translate(-1598.948 -45.293)">
+                            <path id="Path_155" data-name="Path 155"
+                                d="M100.3,44.532c2.256,0,4.022,1.046,4.022,3.859v4.235c0,2.812-1.766,3.859-4.022,3.859H97.411c-.67,0-1.112-.36-1.112-.768V45.3c0-.409.442-.768,1.112-.768ZM98.85,46.756v7.5H100.3c.916,0,1.472-.523,1.472-1.635V48.391c0-1.112-.556-1.635-1.472-1.635Z"
+                                transform="translate(1512.18 69.936)" fill="#fff" />
+                            <path id="Path_156" data-name="Path 156"
+                                d="M152.784,52.724V48.391c0-2.812,1.75-3.859,4.006-3.859s4.022,1.046,4.022,3.859v4.333c0,2.812-1.766,3.859-4.022,3.859S152.784,55.536,152.784,52.724Zm5.478-4.333c0-1.128-.556-1.635-1.472-1.635s-1.455.507-1.455,1.635v4.333c0,1.128.54,1.635,1.455,1.635s1.472-.507,1.472-1.635Z"
+                                transform="translate(1465.213 69.936)" fill="#fff" />
+                            <path id="Path_157" data-name="Path 157"
+                                d="M215.8,55.8l-3.107-5.657V55.7c0,.523-.638.785-1.275.785s-1.275-.261-1.275-.785V45.317c0-.54.638-.785,1.275-.785.916,0,1.259.082,1.88,1.275l2.649,5.052V45.3c0-.54.638-.768,1.275-.768s1.275.229,1.275.768V55.7c0,.523-.638.785-1.275.785A1.427,1.427,0,0,1,215.8,55.8Z"
+                                transform="translate(1417.518 69.936)" fill="#fff" />
+                            <path id="Path_158" data-name="Path 158"
+                                d="M265.366,54.954a.844.844,0,0,1,.033-.18L268.44,44.8c.18-.572.915-.85,1.668-.85s1.488.278,1.668.85l3.058,9.974a.846.846,0,0,1,.033.18c0,.6-.932,1.046-1.635,1.046-.409,0-.736-.131-.834-.474l-.556-2.044h-3.45l-.556,2.044c-.1.343-.425.474-.834.474C266.3,56,265.366,55.559,265.366,54.954ZM271.3,51.52l-1.193-4.382-1.194,4.382Z"
+                                transform="translate(1371.598 70.42)" fill="#fff" />
+                            <g id="Group_110" data-name="Group 110" transform="translate(1598.948 45.293)">
+                                <g id="donation-svgrepo-com" transform="translate(0 0)">
+                                    <path class="cls-1" id="Path_152" data-name="Path 152"
+                                        d="M151.612,14.289c5.7,0,8.25,3.192,9.256,5.067a.338.338,0,0,0,.595,0c1-1.875,3.543-5.067,9.238-5.067,6.487,0,12.194,4.428,12.194,12.515a16.98,16.98,0,0,1-2.518,9.2c-3.772,6.375-16.2,14.64-18.749,16.269a.856.856,0,0,1-.922,0c-2.555-1.621-14.982-9.845-18.783-16.271a16.971,16.971,0,0,1-2.513-9.2C139.409,18.717,145.125,14.289,151.612,14.289Z"
+                                        transform="translate(-124.387 -11.624)" fill="#b90303" />
+                                    <g id="Group_108" data-name="Group 108" transform="translate(0 0)">
+                                        <path id="Path_153" data-name="Path 153"
+                                            d="M149.543,43.453a3.519,3.519,0,0,1-1.887-.548c-1.557-.988-15.329-9.86-19.65-17.164a19.668,19.668,0,0,1-2.884-10.561,14.99,14.99,0,0,1,4.5-11.226A14.961,14.961,0,0,1,139.99,0a12.921,12.921,0,0,1,9.55,3.709A12.893,12.893,0,0,1,159.078,0,14.947,14.947,0,0,1,169.44,3.954a15,15,0,0,1,4.5,11.225,19.674,19.674,0,0,1-2.889,10.561C166.756,33,152.993,41.907,151.438,42.9A3.516,3.516,0,0,1,149.543,43.453ZM139.99,5.329c-4.748,0-9.538,3.046-9.538,9.85a14.245,14.245,0,0,0,2.142,7.847c2.815,4.758,11.81,11.388,16.947,14.751,5.137-3.38,14.126-10.027,16.921-14.751a14.248,14.248,0,0,0,2.146-7.847c0-6.8-4.786-9.85-9.529-9.85-4.078,0-6,1.989-6.888,3.658a3,3,0,0,1-5.294,0C146,7.321,144.076,5.329,139.99,5.329Z"
+                                            transform="translate(-112.765 0)" fill="#fff" />
+                                        <path id="Path_154" data-name="Path 154"
+                                            d="M125.869,287.025H65.378a6.526,6.526,0,0,1-6.519-6.519V241.971a6.526,6.526,0,0,1,6.519-6.519H83.522a2.665,2.665,0,0,1,2.665,2.665v8.434h21.538a2.665,2.665,0,0,1,0,5.329h-24.2a2.665,2.665,0,0,1-2.665-2.665v-8.434H65.378a1.191,1.191,0,0,0-1.189,1.189v38.535a1.191,1.191,0,0,0,1.189,1.189h60.491a1.19,1.19,0,0,0,1.189-1.189V241.971a1.191,1.191,0,0,0-1.189-1.189H107.725a2.665,2.665,0,1,1,0-5.329h18.144a6.526,6.526,0,0,1,6.519,6.519v38.535A6.526,6.526,0,0,1,125.869,287.025Z"
+                                            transform="translate(-58.859 -191.543)" fill="#fff" />
+                                    </g>
+                                </g>
+                                <path id="Path_159" data-name="Path 159"
+                                    d="M324.636,44.532c.54,0,.768.589.768,1.128,0,.621-.278,1.161-.768,1.161h-2.256V55.7c0,.523-.638.785-1.275.785s-1.275-.261-1.275-.785V46.821h-2.256c-.491,0-.768-.54-.768-1.161,0-.54.229-1.128.768-1.128Z"
+                                    transform="translate(-270.121 24.643)" fill="#fff" />
+                            </g>
+                            <path id="Path_160" data-name="Path 160"
+                                d="M376.42,49.519h2.452c.491,0,.768.474.768,1,0,.442-.229.965-.768.965H376.42v2.779H380.8c.491,0,.768.523.768,1.128,0,.523-.229,1.1-.768,1.1h-5.821c-.556,0-1.112-.261-1.112-.785V45.317c0-.523.556-.785,1.112-.785H380.8c.54,0,.768.572.768,1.1,0,.6-.278,1.128-.768,1.128H376.42Z"
+                                transform="translate(1281.375 69.936)" fill="#fff" />
+                        </g>
+                    </svg>
+                </a>
+                <div class="lan-auth-btns d-flex flex-column">
+                    <div>
+                        <label class="switch">
+                            <input type="checkbox">
+                            <span class="slider round">
+                                <span class="slider-inner-test">
+                                </span>
+                            </span>
+                        </label>
+                    </div>
+                    <span class="auth-text">
+                        <a href="#">Log in </a> /
+                        <a href="#">Sign up </a>
+                    </span>
+                </div>
+                <button class="navbar-menue-toggler" onclick="handelNavMenueToggle()">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
     <main>
-        <!-- Key Programs & Services Section with Background Image -->
-        <section class="services-section">
-            <div class="wave-container">
-                <div class="container-fluid px-md-5">
-                    <h2 class="section-title">Key Programs & Services</h2>
-                    
-                    <div class="row services-grid g-4">
-                        <div class="col-lg-2 col-md-4 col-sm-6 col-12 mb-4 d-flex justify-content-center">
-                            <div class="service-card" aria-labelledby="service-title-1">
-                                <div class="service-card-header">
-                                    <div class="service-icon">
-                                        <img src="images/Applied-behavior.svg" alt="ABA Therapy">
-                                    </div>
-                                </div>
-                                <div class="service-card-body">
-                                    <h3 id="service-title-1">Applied Behavior Analysis (ABA) therapy</h3>
-                                    <div class="dropdown-arrow">
-                                        <img src="images/arrow-up-for cards.svg" alt="Expand">
-                                    </div>
-                                </div>
-                                <div class="service-card-hover">
-                                    <p>Evidence-based therapy focusing on improving specific behaviors such as communication, social skills, and learning abilities.</p>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="col-lg-2 col-md-4 col-sm-6 col-12 mb-4 d-flex justify-content-center">
-                            <div class="service-card">
-                                <div class="service-card-header">
-                                    <div class="service-icon">
-                                        <img src="images/sensory-integration.svg" alt="Sensory Integration">
-                                    </div>
-                                </div>
-                                <div class="service-card-body">
-                                    <h3>Sensory Integration Activities</h3>
-                                    <div class="dropdown-arrow">
-                                        <img src="images/arrow-up-for cards.svg" alt="Expand">
-                                    </div>
-                                </div>
-                                <div class="service-card-hover">
-                                    <p>Techniques that help children process and respond to sensory information effectively.</p>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="col-lg-2 col-md-4 col-sm-6 col-12 mb-4 d-flex justify-content-center">
-                            <div class="service-card">
-                                <div class="service-card-header">
-                                    <div class="service-icon">
-                                        <img src="images/Motor-Skills.svg" alt="Motor Skills">
-                                    </div>
-                                </div>
-                                <div class="service-card-body">
-                                    <h3>Motor Skills Development</h3>
-                                    <div class="dropdown-arrow">
-                                        <img src="images/arrow-up-for cards.svg" alt="Expand">
-                                    </div>
-                                </div>
-                                <div class="service-card-hover">
-                                    <p>Activities to improve fine and gross motor coordination essential for daily functioning.</p>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="col-lg-2 col-md-4 col-sm-6 col-12 mb-4 d-flex justify-content-center">
-                            <div class="service-card">
-                                <div class="service-card-header">
-                                    <div class="service-icon">
-                                        <img src="images/Social-interaction.svg" alt="Social Interaction">
-                                    </div>
-                                </div>
-                                <div class="service-card-body">
-                                    <h3>Social Interaction Training</h3>
-                                    <div class="dropdown-arrow">
-                                        <img src="images/arrow-up-for cards.svg" alt="Expand">
-                                    </div>
-                                </div>
-                                <div class="service-card-hover">
-                                    <p>Structured programs to develop social skills and strengthen peer relationships.</p>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="col-lg-2 col-md-4 col-sm-6 col-12 mb-4 d-flex justify-content-center">
-                            <div class="service-card">
-                                <div class="service-card-header">
-                                    <div class="service-icon">
-                                        <img src="images/Educational-support.svg" alt="Educational Support">
-                                    </div>
-                                </div>
-                                <div class="service-card-body">
-                                    <h3>Educational Support</h3>
-                                    <div class="dropdown-arrow">
-                                        <img src="images/arrow-up-for cards.svg" alt="Expand">
-                                    </div>
-                                </div>
-                                <div class="service-card-hover">
-                                    <p>Personalized academic assistance to help children succeed in educational settings.</p>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="col-lg-2 col-md-4 col-sm-6 col-12 mb-4 d-flex justify-content-center">
-                            <div class="service-card">
-                                <div class="service-card-header">
-                                    <div class="service-icon">
-                                        <img src="images/Cognitive Growth.svg" alt="Cognitive Growth">
-                                    </div>
-                                </div>
-                                <div class="service-card-body">
-                                    <h3>Cognitive Growth</h3>
-                                    <div class="dropdown-arrow">
-                                        <img src="images/arrow-up-for cards.svg" alt="Expand">
-                                    </div>
-                                </div>
-                                <div class="service-card-hover">
-                                    <p>Activities to enhance thinking, reasoning, and problem-solving abilities.</p>
-                                </div>
+        <section class="hero">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+                        <div class="hero-content">
+                            <h1 class="hero-title">
+                                Building A Bright Future Where Everyone Thrives
+                            </h1>
+                            <div class="hero-btns">
+                                <a href="#">
+                                    Learn More <i class="fa-solid fa-arrow-right"></i>
+                                </a>
                             </div>
                         </div>
                     </div>
-                    
-                    <div class="read-more mt-4 mb-5">
-                        <a href="#" class="btn btn-link text-white border-bottom border-white py-2 text-decoration-none">Read More</a>
+                </div>
+        </section>
+
+        <section class="about">
+            <img class="about-wave" src="images/hero-wave.png" alt="wave img" />
+            <div class="container about-container">
+                <div class="row">
+                    <div class="col-12">
+                        <h2 class="about-title">Ready To Make A Difference?</h2>
+                    </div>
+                    <div class="about-head-btn col-6 mb-5">
+                        <button class="about-btn d-block m-auto btn ">
+                            Donate Now
+                        </button>
+                    </div>
+                    <div class="col-12">
+                        <div class="about-content row">
+                            <p class="col-lg-7 col-md-12 ">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi iure veritatis facilis
+                                delectus repellendus fugit et, illum provident minus quis ratione voluptas commodi vero
+                                nulla dolor vel consequatur tenetur esse.
+                            </p>
+                            <p class="col-lg-7 col-md-12">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi iure veritatis facilis
+                                delectus repellendus fugit et, illum provident minus quis ratione voluptas commodi vero
+                                nulla dolor vel consequatur tenetur esse. Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio sunt blanditiis aliquid provident cumque dolorum.
+                            </p>
+
+                            <div class="col-12 pt-5">
+                                <div class="row about-misson">
+                                    <div class="col-lg-6 col-md-12">
+                                        <img src="images/shutterstock_1932094208.png" />
+                                    </div>
+                                    <div class="col-lg-6 col-md-12">
+                                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam
+                                            reprehenderit, repudiandae ad perferendis harum qui magni aliquid eaque
+                                            voluptate corrupti aperiam a rerum eveniet velit asperiores eius omnis quod.
+                                            Perspiciatis atque earum natus, voluptatibus ipsum commodi ducimus cumque
+                                            recusandae repellat?</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
-        
+
+
+        <section class="services-section">
+            <img class="bg-image" src="./images/lg-bg-Key Programs & Services.png" alt="" />
+
+            <div class="container-fluid px-md-5">
+                <h2 class="section-title">Key Programs & Services</h2>
+
+                <div class="row services-grid g-4">
+                    <div class="col-lg-2 col-md-4 col-sm-6 col-12 mb-4 d-flex justify-content-center">
+                        <div class="service-card" aria-labelledby="service-title-1">
+                            <div class="service-card-header">
+                                <div class="service-icon">
+                                    <img src="images/Applied-behavior.svg" alt="ABA Therapy">
+                                </div>
+                            </div>
+                            <div class="service-card-body">
+                                <h3 id="service-title-1">Applied Behavior Analysis (ABA) therapy</h3>
+                                <div class="dropdown-arrow">
+                                    <img src="images/arrow-up-for cards.svg" alt="Expand">
+                                </div>
+                            </div>
+                            <div class="service-card-hover">
+                                <p>Evidence-based therapy focusing on improving specific behaviors such as
+                                    communication, social skills, and learning abilities.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-2 col-md-4 col-sm-6 col-12 mb-4 d-flex justify-content-center">
+                        <div class="service-card">
+                            <div class="service-card-header">
+                                <div class="service-icon">
+                                    <img src="images/sensory-integration.svg" alt="Sensory Integration">
+                                </div>
+                            </div>
+                            <div class="service-card-body">
+                                <h3>Sensory Integration Activities</h3>
+                                <div class="dropdown-arrow">
+                                    <img src="images/arrow-up-for cards.svg" alt="Expand">
+                                </div>
+                            </div>
+                            <div class="service-card-hover">
+                                <p>Techniques that help children process and respond to sensory information
+                                    effectively.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-2 col-md-4 col-sm-6 col-12 mb-4 d-flex justify-content-center">
+                        <div class="service-card">
+                            <div class="service-card-header">
+                                <div class="service-icon">
+                                    <img src="images/Motor-Skills.svg" alt="Motor Skills">
+                                </div>
+                            </div>
+                            <div class="service-card-body">
+                                <h3>Motor Skills Development</h3>
+                                <div class="dropdown-arrow">
+                                    <img src="images/arrow-up-for cards.svg" alt="Expand">
+                                </div>
+                            </div>
+                            <div class="service-card-hover">
+                                <p>Activities to improve fine and gross motor coordination essential for daily
+                                    functioning.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-2 col-md-4 col-sm-6 col-12 mb-4 d-flex justify-content-center">
+                        <div class="service-card">
+                            <div class="service-card-header">
+                                <div class="service-icon">
+                                    <img src="images/Social-interaction.svg" alt="Social Interaction">
+                                </div>
+                            </div>
+                            <div class="service-card-body">
+                                <h3>Social Interaction Training</h3>
+                                <div class="dropdown-arrow">
+                                    <img src="images/arrow-up-for cards.svg" alt="Expand">
+                                </div>
+                            </div>
+                            <div class="service-card-hover">
+                                <p>Structured programs to develop social skills and strengthen peer relationships.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-2 col-md-4 col-sm-6 col-12 mb-4 d-flex justify-content-center">
+                        <div class="service-card">
+                            <div class="service-card-header">
+                                <div class="service-icon">
+                                    <img src="images/Educational-support.svg" alt="Educational Support">
+                                </div>
+                            </div>
+                            <div class="service-card-body">
+                                <h3>Educational Support</h3>
+                                <div class="dropdown-arrow">
+                                    <img src="images/arrow-up-for cards.svg" alt="Expand">
+                                </div>
+                            </div>
+                            <div class="service-card-hover">
+                                <p>Personalized academic assistance to help children succeed in educational
+                                    settings.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-2 col-md-4 col-sm-6 col-12 mb-4 d-flex justify-content-center">
+                        <div class="service-card">
+                            <div class="service-card-header">
+                                <div class="service-icon">
+                                    <img src="images/Cognitive Growth.svg" alt="Cognitive Growth">
+                                </div>
+                            </div>
+                            <div class="service-card-body">
+                                <h3>Cognitive Growth</h3>
+                                <div class="dropdown-arrow">
+                                    <img src="images/arrow-up-for cards.svg" alt="Expand">
+                                </div>
+                            </div>
+                            <div class="service-card-hover">
+                                <p>Activities to enhance thinking, reasoning, and problem-solving abilities.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="read-more mt-4 mb-5">
+                    <a href="#"
+                        class="btn btn-link text-white border-bottom border-white py-2 text-decoration-none">Read
+                        More</a>
+                </div>
+            </div>
+
+        </section>
+
+
+
+
+
+
+
         <!-- Sensory Room Section with Human-Shaped Image Wrapper -->
         <section class="sensory-room-section">
             <!-- Text content -->
             <div class="sensory-content">
                 <p class="sensory-text">
                     Discover our state-of-the-art <span class="highlight">SENSORY ROOM</span>,
-                    our transformative ABA therapy programs, our 
-                    empowering family training workshops, and our 
+                    our transformative ABA therapy programs, our
+                    empowering family training workshops, and our
                     impactful community outreach initiatives.
                 </p>
             </div>
-            
-            <!-- Images directly in the section -->
-            <div class="sensory-image-wrapper">
-                <!-- Human-shaped image that wraps around the main image -->
+
+            <!-- <div class="sensory-image-wrapper">
                 <div class="human-image-wrapper"></div>
-                <!-- Main sensory room image -->
-                <div class="sensory-image"></div>
+                <div class="sensory-image"></div> -->
             </div>
         </section>
-        
+
         <!-- Testimonials Section -->
         <section class="testimonials-section">
             <div class="container">
@@ -174,7 +423,7 @@
                     Hear the heartwarming stories of families whose lives have been touched by Tayf Autism Center.
                     Their experiences are a testament to the power of hope and the impact of our collective efforts
                 </p>
-                
+
                 <div class="row testimonials-grid">
                     <div class="col-lg-4 col-md-6 mb-4">
                         <div class="testimonial-card">
@@ -191,7 +440,7 @@
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="col-lg-4 col-md-6 mb-4">
                         <div class="testimonial-card">
                             <div class="testimonial-image">
@@ -207,7 +456,7 @@
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="col-lg-4 col-md-6 mb-4">
                         <div class="testimonial-card">
                             <div class="testimonial-image">
@@ -227,7 +476,7 @@
             </div>
         </section>
     </main>
-    
+
     <!-- Footer -->
     <footer>
         <div class="container">
@@ -245,5 +494,28 @@
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
+    <script>
+        function handleDropDowenMenu(element) {
+            const allsub = document.querySelectorAll(".has-sub-menu");
+            allsub.forEach((item) => {
+                if (item !== element.parentElement) {
+                    item.classList.remove("active");
+                }
+            })
+            const li = element.parentElement;
+            if (li.classList.contains('active')) {
+                li.classList.remove('active');
+            } else {
+                li.classList.add('active');
+            }
+        }
+
+
+        function handelNavMenueToggle() {
+            document.querySelector(".nav-menue").classList.toggle("active");
+        }
+    </script>
 </body>
+
 </html>
