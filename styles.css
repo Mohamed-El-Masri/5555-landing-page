@@ -494,6 +494,7 @@ input:checked+.slider:before {
     width: 100%;
 }
 
+
 @media (max-width: 1300px) {
     .hero .hero-content {
 
@@ -763,23 +764,41 @@ input:checked+.slider:before {
 
 /* Sensory Room Section with Full Height Image */
 /*#region Sensory Room Section*/
-.sensory-room-section {
+/* .sensory-room-section {
     position: relative;
     padding: 60px 0;
     margin-top: 0;
     background-color: rgpa(255, 255, 255, 0);
-
     display: flex;
     align-items: center;
     min-height: 500px;
+} */
+
+.sensory-room-section {
+    min-height: 100vh;
+    width: 100%;
+
 }
 
-.sensory-content {
+.contaner-wrap {
+    min-height: 100%;
+    width: 100%;
+    position: relative;
+    flex-wrap: nowrap;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* .sensory-content {
     width: 50%;
     padding: 30px 50px;
     position: relative;
     z-index: 2;
-}
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+} */
 
 .sensory-text {
     font-family: var(--unnamed-font-family-montserrat);
@@ -798,13 +817,6 @@ input:checked+.slider:before {
     font-weight: bold;
 }
 
-.sensory-image-wrapper {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 50%;
-    height: 100%;
-}
 
 .human-image-wrapper {
     position: relative;
@@ -831,32 +843,13 @@ input:checked+.slider:before {
     z-index: 1;
 }
 
+
+
+
+
+
 /* Responsive adjustments for sensory section */
-@media (max-width: 991.98px) {
-    .sensory-room-section {
-        flex-direction: column;
-        padding: 40px 0;
-    }
 
-    .sensory-content {
-        width: 100%;
-        padding: 20px;
-        text-align: center;
-        margin-bottom: 250px;
-        /* Make space for the image below */
-    }
-
-    .sensory-image-wrapper {
-        position: relative;
-        width: 100%;
-        height: 300px;
-        bottom: 0;
-    }
-
-    .sensory-text {
-        text-align: center;
-    }
-}
 
 @media (max-width: 767.98px) {
     .human-image-wrapper {
@@ -878,6 +871,123 @@ input:checked+.slider:before {
         height: 220px;
     }
 }
+
+
+
+.sensory-room {
+    position: relative;
+    min-height: 80vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.contaner-wrap-div {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    position: relative;
+}
+
+.contaner-wrap-div .imgs-shap-div {
+    flex: 1;
+    position: relative;
+    height: 80vh;
+}
+
+.contaner-wrap-div .imgs-shap-div img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    position: absolute;
+    top: 0;
+    z-index: 50;
+}
+
+.sensory-content-div {
+    flex: 4;
+
+}
+
+.sensory-text-div {
+    font-family: var(--unnamed-font-family-montserrat);
+    font-size: var(--unnamed-font-size-29-166669845581055);
+    line-height: var(--unnamed-line-spacing-41-66667175292969);
+    color: var(--unnamed-color-2d0861);
+    text-align: center;
+    padding: 0 2rem 0;
+    width: 80%;
+    margin: auto;
+}
+
+.highlight-span {
+    color: var(--unnamed-color-2d0861);
+    font-family: var(--unnamed-font-family-mv-boli);
+    font-size: var(--unnamed-font-size-43);
+    line-height: var(--unnamed-line-spacing-51);
+    display: inline-block;
+    font-weight: bold;
+}
+
+
+.imgs-shap-div img:nth-child(2) {
+    right: 0;
+    z-index: 50;
+}
+
+.imgs-shap-div img:nth-child(1) {
+    left: -25%;
+    z-index: 60;
+    scale: 1.1;
+    top: -3%;
+
+
+}
+
+
+@media (max-width: 991.98px) {
+    .services-section{
+        padding-bottom: 0 !important;
+        height:450vh ;
+    }
+    .sensory-room,
+    .contaner-wrap-div .imgs-shap-div,
+    .sensory-room{
+        min-height: 50vh !important;
+        height: 50vh !important;
+    }
+
+    .imgs-shap-div img:nth-child(1) {
+        scale: 0.7;
+    }
+    .sensory-text-div {
+        padding: 0 1rem 0;
+        width: 90%;
+        margin: auto;
+        --unnamed-font-size-29-166669845581055: 0.8rem;
+        --unnamed-line-spacing-41-66667175292969: 0.8rem;
+        --unnamed-font-size-43: 0.8rem;
+        --unnamed-line-spacing-51:0.8rem;
+    
+    }
+    
+
+}
+@media (max-width: 575.98px) {
+    .sensory-text-div {       
+        --unnamed-font-size-29-166669845581055: 0.8rem;
+        --unnamed-line-spacing-41-66667175292969: 0.8rem;
+        --unnamed-font-size-43: 0.8rem;
+        --unnamed-line-spacing-51:0.8rem;
+        padding: 0 0.5rem 0;
+        font-size: 0.5rem;
+    }
+
+}
+
+
 
 /*#endregion General Styles*/
 
