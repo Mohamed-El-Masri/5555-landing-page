@@ -381,26 +381,63 @@ input:checked+.slider:before {
 
 
 /*Hero Section*/
+
+
 .hero {
     width: 100%;
-    min-height: 80vh;
-    background-image: linear-gradient(rgba(0 0 0 / 10%), rgba(0 0 0 / 40%)),
-        url(images/Mask\ Group\ 15.png);
-    background-position: top center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    min-height: 170vh;
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
-    z-index: 1;
+
+}
+
+.hero-img-bg {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    object-fit: cover;
+    object-position: bottom center;
+
+}
+
+
+.hero-down-talk {
+    /* background-color: #000000; */
+    position: relative;
+    top: 20rem;
+}
+
+.hero-down-talk .about-title {
+    color: var(--unnamed-color-ffffff);
+    font-weight: var(--unnamed-font-weight-bold);
+    font-size: 3.5rem;
+    line-height: 5rem;
+    width: 40%;
+    margin-left: auto;
+    text-align: right;
+}
+
+.about-btn {
+    background-color: var(--unnamed-color-main-hover);
+    color: var(--unnamed-color-ffffff);
+}
+
+.hero-about {
+    font-size: 1.3rem;
+    line-height: 2rem;
 }
 
 .hero .hero-content {
     text-align: right;
     color: var(--unnamed-color-2d0861);
     position: relative;
-    top: -20%;
+    top: -100%;
+
 }
 
 .hero .hero-content h1 {
@@ -420,6 +457,36 @@ input:checked+.slider:before {
     font-size: 1rem;
 }
 
+@media (max-width: 991px) {
+    .hero-img-bg {
+        object-position: right center;
+    
+    }
+    .hero .hero-content {
+        text-align: right;
+        color: var(--unnamed-color-2d0861);
+        position: relative;
+        top: 150% !important;
+    
+    }
+    .hero {
+        align-items: center;
+        justify-content: space-between;
+    
+    }
+    .hero-down-talk {
+        position: relative;
+        top: 15rem;
+    }
+    
+    .hero-about {
+        font-size: 0.8rem;
+        line-height: 1rem;
+    }
+
+
+
+}
 @media (max-width: 575.98px) {
 
     .hero {
@@ -430,12 +497,25 @@ input:checked+.slider:before {
         padding-bottom: 5rem;
     }
 
-
+    .hero .hero-content {
+       
+        top: 130% !important;
+    
+    }
     .hero .hero-content {
         top: 0 !important;
     }
 
+    .hero-down-talk {
+        position: relative;
+        top: 10rem;
 
+    }
+    
+    .hero-about {
+        font-size: 0.7rem;
+        line-height: 1rem;
+    }
 
 }
 
@@ -445,7 +525,9 @@ input:checked+.slider:before {
 .about {
     position: relative;
     width: 100%;
-    min-height: 100vh;
+    
+    z-index: -1;
+    top: -50%;
 }
 
 .about .about-wave {
@@ -776,7 +858,7 @@ input:checked+.slider:before {
 } */
 
 .sensory-room-section {
-    /* min-height: 100vh; */
+    
     width: 100%;
     position: relative;
     flex-wrap: nowrap;
@@ -940,9 +1022,10 @@ input:checked+.slider:before {
 }
 
 @media screen and (max-width: 576px) {
-    .sensory-room{
-        padding: 1rem 0 !important; 
+    .sensory-room {
+        padding: 1rem 0 !important;
     }
+
     .sensory-text-div {
 
         --unnamed-font-size-29-166669845581055: var(--unnamed-font-size-20);
@@ -960,10 +1043,12 @@ input:checked+.slider:before {
 
 
 }
+
 @media screen and (max-width: 350px) {
-    .sensory-room{
-        padding: 0.5rem 0 !important; 
+    .sensory-room {
+        padding: 0.5rem 0 !important;
     }
+
     .sensory-text-div {
 
         --unnamed-font-size-29-166669845581055: 0.7rem;
