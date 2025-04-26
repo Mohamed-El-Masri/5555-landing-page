@@ -523,7 +523,6 @@ input:checked+.slider:before {
         font-size: 12px;
         line-height: 1rem;
         width: 100% !important;
-        margin-top: 10rem;
     }
 
     .div-22 {
@@ -629,6 +628,9 @@ input:checked+.slider:before {
         padding: 3rem 0 0 0;
     }
 
+    .about .about-container .about-misson {
+        padding-top: 5rem;
+    }
     .about .about-container .about-misson img {
         width: 100%;
     }
@@ -638,7 +640,7 @@ input:checked+.slider:before {
 @media screen and (max-width: 400px) {
   
     .about .about-container .about-misson {
-        margin-top: 3rem;
+        margin-top: 3rem !important;
     }
     
    
