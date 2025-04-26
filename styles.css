@@ -462,7 +462,9 @@ input:checked+.slider:before {
         position: relative;
         order: 1 !important;
         top: 15rem;
+
     }
+
 
     .div-22 h1 {
         text-align: right;
@@ -472,11 +474,12 @@ input:checked+.slider:before {
         position: relative;
         order: 2 !important;
         top: 5rem;
+        /* padding-top:5rem ; */
     }
 
     .hero-about {
-        font-size: var(--unnamed-font-size-16);
         line-height: 1.5rem;
+        font-size: 12px;
     }
 }
 
@@ -507,7 +510,7 @@ input:checked+.slider:before {
     }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 450px) {
     .main-hero-2-wave {
         background-image: url(./images/wave-phone.png);
         background-size: cover;
@@ -626,7 +629,9 @@ input:checked+.slider:before {
         padding: 3rem 0 0 0;
     }
 
-
+    .about .about-container .about-misson img {
+        width: 100%;
+    }
 
 }
 
@@ -636,10 +641,7 @@ input:checked+.slider:before {
         margin-top: 3rem;
     }
     
-    .about .about-container .about-misson img {
-        width: 100%;
-    }
-    
+   
     .about .about-container .about-misson p {
         font-size: 12px;
         text-align: center;
@@ -1039,6 +1041,10 @@ input:checked+.slider:before {
         padding: 1rem 0 !important;
     }
 
+    .div-11{
+        padding-top: 5rem !important;
+    }
+
     .sensory-text-div {
 
         --unnamed-font-size-29-166669845581055: var(--unnamed-font-size-20);
@@ -1064,7 +1070,7 @@ input:checked+.slider:before {
 
 }
 
-@media screen and (max-width: 350px) {
+@media screen and (max-width: 450px) {
     .sensory-room {
         padding: 0.5rem 0 !important;
     }
